@@ -932,6 +932,11 @@ namespace OxyPlot
         /// </returns>
         protected override IEnumerable<PlotElement> GetHitTestElements()
         {
+            foreach (var annotation in this.Annotations.Reverse().Where(a => a.Layer == AnnotationLayer.AboveAxis)) 
+            {
+                yield return annotation;
+            }
+
             foreach (var axis in this.Axes.Reverse().Where(a => a.IsAxisVisible && a.Layer == AxisLayer.AboveSeries))
             {
                 yield return axis;

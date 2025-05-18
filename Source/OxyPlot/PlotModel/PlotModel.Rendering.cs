@@ -107,6 +107,7 @@ namespace OxyPlot
                     this.RenderTitle(rc);
                     this.RenderBox(rc);
                     this.RenderAxes(rc, AxisLayer.AboveSeries);
+                    this.RenderAnnotations(rc, AnnotationLayer.AboveAxis);
 
                     if (this.IsLegendVisible)
                     {

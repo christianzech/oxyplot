@@ -29,6 +29,11 @@ namespace OxyPlot.Annotations
         /// <summary>
         /// Render the annotation above the series.
         /// </summary>
-        AboveSeries
+        AboveSeries,
+
+        /// <summary>
+        /// Render the annotation on top of all chart elements.
+        /// </summary>
+        AboveAxis
     }
 }
